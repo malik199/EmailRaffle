@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EmailRaffle</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+	<string name="new_raffle">New Raffle</string>
+	<string name="end_raffle">End Raffle</string>
+	<string name="view_entries">View Entries</string>
+	<string name="raffle_name">Raffle Name</string>
+	<string name="email_address">Email Address</string>
+	<string name="first_name">First Name</string>
+	<string name="last_name">Last Name</string>
+	<string name="number_entries">Number of Entries</string>
+	<string name="submit">Submit</string>
+</resources>
