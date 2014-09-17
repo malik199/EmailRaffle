@@ -52,9 +52,20 @@ public class AddContestantActivity extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.end_raffle) {
-			return true;
+		
+		//THIS WILL SEND YOU TO THE VIEW ENTRIES CLASS
+		switch (id){
+			case R.id.view_entries:
+				Intent intent = new Intent(AddContestantActivity.this, ViewEntries.class);
+				startActivity(intent);
+				break;
+			default:
+				break;
+			
 		}
+		/*if (id == R.id.view_entries) {
+			return true;
+		}*/
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -142,8 +153,6 @@ public class AddContestantActivity extends Activity {
 				TextView textViewOutput = (TextView) findViewById(R.id.textViewOutput);
 				textViewOutput.setText(jsonString);
 			}
-
-
 
 			/*
 			 * Log.d("myMessage1", strEmailAddress.getText().toString());
