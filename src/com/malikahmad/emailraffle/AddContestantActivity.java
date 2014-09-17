@@ -113,12 +113,11 @@ public class AddContestantActivity extends Activity {
 				}
 				
 				//Take the existing JSON and put it into a new Array
-				jsonArr.put(b.toString());
+				//jsonArr.put(b);
 				String jsonString2 = jsonArr.toString();
 				
 				//Write the new array
-				TextView textViewOutput = (TextView) findViewById(R.id.textViewOutput);
-				textViewOutput.setText(jsonString2);
+				displayData(jsonString);
 				
 				//Write the new array to disk
 				try {
@@ -159,6 +158,11 @@ public class AddContestantActivity extends Activity {
 			intContestantNumber.setText("Contestant #" + contNumb);
 			resetFields(strEmailAddress, strFirstName, strLastName);
 		}
+	}
+	
+	private void displayData(String myString){
+		TextView textViewOutput = (TextView) findViewById(R.id.textViewOutput);
+		textViewOutput.setText(myString);
 	}
 
 	private void resetFields(Object o1, Object o2, Object o3) {
