@@ -73,7 +73,7 @@ public class AddContestantActivity extends Activity {
 		EditText strEmailAddress = (EditText) findViewById(R.id.emailAddress);
 		EditText strFirstName = (EditText) findViewById(R.id.firstName);
 		EditText strLastName = (EditText) findViewById(R.id.lastName);
-		EditText strNumberEntries = (EditText) findViewById(R.id.numberEntries);
+		//EditText strNumberEntries = (EditText) findViewById(R.id.numberEntries);
 
 		if (!isValidEmail(strEmailAddress.getText().toString())) {
 			strEmailAddress.setError("Invalid Email");
@@ -92,7 +92,7 @@ public class AddContestantActivity extends Activity {
 			jsonObj.put("EmailAddress", strEmailAddress.getText().toString());
 			jsonObj.put("FirstName", strFirstName.getText().toString());
 			jsonObj.put("LastName", strLastName.getText().toString());
-			jsonObj.put("NumberEntries", strNumberEntries.getText().toString());
+			//jsonObj.put("NumberEntries", strNumberEntries.getText().toString());
 			// data.put(tour);
 			jsonArr.put(jsonObj);
 			jsonString = jsonArr.toString();
@@ -157,20 +157,18 @@ public class AddContestantActivity extends Activity {
 			TextView intContestantNumber = (TextView) findViewById(R.id.contestantNumber);
 			contNumb++;
 			intContestantNumber.setText("Contestant #" + contNumb);
-			resetFields(strEmailAddress, strFirstName, strLastName,
-					strNumberEntries);
-
+			resetFields(strEmailAddress, strFirstName, strLastName);
 		}
 	}
 
-	private void resetFields(Object o1, Object o2, Object o3, Object o4) {
-		int resetNumb = 1;
+	private void resetFields(Object o1, Object o2, Object o3) {
+		//int resetNumb = 1;
 		((EditText) o1).setText(null);
 		((EditText) o1).requestFocus();
 
 		((EditText) o2).setText(null);
 		((EditText) o3).setText(null);
-		((EditText) o4).setText(String.valueOf(resetNumb));
+		//((EditText) o4).setText(String.valueOf(resetNumb));
 
 	}
 
