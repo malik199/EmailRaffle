@@ -13,4 +13,5 @@
 	<string name="number_entries">Number of Entries</string>
 	<string name="submit">Submit</string>
 	<string name="random_text">Random Text</string>
+	<string name="get_winner">GET THE WINNER</string>
 </resources>

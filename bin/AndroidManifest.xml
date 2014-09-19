@@ -24,6 +24,7 @@
         </activity>
         <activity android:name=".AddContestantActivity" />
         <activity android:name=".ViewEntries" />
+        <activity android:name=".EndRaffle" />
     </application>
 
 </manifest>

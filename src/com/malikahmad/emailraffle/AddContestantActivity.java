@@ -59,6 +59,11 @@ public class AddContestantActivity extends Activity {
 				Intent intent = new Intent(AddContestantActivity.this, ViewEntries.class);
 				startActivity(intent);
 				break;
+			case R.id.end_raffle:
+				Intent intent2 = new Intent(AddContestantActivity.this, EndRaffle.class);
+				intent2.putExtra("raffleName", str_raffleName);
+				startActivity(intent2);
+				break;
 			default:
 				break;
 			
