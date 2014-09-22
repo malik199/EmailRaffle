@@ -118,7 +118,7 @@ public class EndRaffle extends Activity {
 	}
 	
 	public void exportCSV(View view) {
-		Toast.makeText(getApplicationContext(), "Exporting CSV",
+		Toast.makeText(getApplicationContext(), "We gonna Export to CSV!!",
 				Toast.LENGTH_LONG).show();
 	
 	}
