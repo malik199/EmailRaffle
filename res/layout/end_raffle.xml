@@ -33,4 +33,46 @@
         android:textColor="#FFFFFF"
         android:textStyle="bold" />
 
+    <ImageView
+        android:id="@+id/timerclock"
+        android:layout_width="148dp"
+        android:layout_height="138dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/clock"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/thewinneris"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="@string/the_winner"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/winningEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="winning email"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#005A31"
+        android:textStyle="bold"
+        android:visibility="invisible"  />
+
+    <Button
+        android:id="@+id/export_csv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="@string/export_csv"
+        android:textStyle="bold" 
+        android:visibility="invisible" 
+        android:onClick="exportCSV" />
+
 </LinearLayout>

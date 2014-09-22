@@ -14,4 +14,6 @@
 	<string name="submit">Submit</string>
 	<string name="random_text">Random Text</string>
 	<string name="get_winner">GET THE WINNER</string>
+	<string name="the_winner">And the winner is &#8230;)</string>
+	<string name="export_csv">Export to CSV</string>
 </resources>

@@ -57,6 +57,7 @@ public class AddContestantActivity extends Activity {
 		switch (id){
 			case R.id.view_entries:
 				Intent intent = new Intent(AddContestantActivity.this, ViewEntries.class);
+				intent.putExtra("raffleName", str_raffleName);
 				startActivity(intent);
 				break;
 			case R.id.end_raffle:
