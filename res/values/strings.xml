@@ -14,6 +14,9 @@
 	<string name="submit">Submit</string>
 	<string name="random_text">Random Text</string>
 	<string name="get_winner">GET THE WINNER</string>
-	<string name="the_winner">And the winner is &#8230;)</string>
+	<string name="the_winner">And the winner is&#8230;</string>
 	<string name="export_csv">Export to CSV</string>
+	<string name="already_raffle">You have an existing raffle with this name. Do you want to continue using this raffle or create a new raffle?</string>
+	<string name="continue_raffle">Continue Raffle</string>
+	<string name="new_name">New Name</string>
 </resources>

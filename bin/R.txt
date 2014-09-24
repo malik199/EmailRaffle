@@ -366,7 +366,9 @@ int string abc_searchview_description_voice 0x7f0a0008
 int string abc_shareactionprovider_share_with 0x7f0a000c
 int string abc_shareactionprovider_share_with_application 0x7f0a000b
 int string action_settings 0x7f0a000f
+int string already_raffle 0x7f0a001d
 int string app_name 0x7f0a000d
+int string continue_raffle 0x7f0a001e
 int string email_address 0x7f0a0014
 int string end_raffle 0x7f0a0011
 int string export_csv 0x7f0a001c
@@ -374,6 +376,7 @@ int string first_name 0x7f0a0015
 int string get_winner 0x7f0a001a
 int string hello_world 0x7f0a000e
 int string last_name 0x7f0a0016
+int string new_name 0x7f0a001f
 int string new_raffle 0x7f0a0010
 int string number_entries 0x7f0a0017
 int string raffle_name 0x7f0a0013
