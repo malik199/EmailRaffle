@@ -1081,7 +1081,6 @@ containing a value of this type.
         public static final int ic_launcher=0x7f020058;
     }
     public static final class id {
-        public static final int RaffleDisplayName=0x7f050051;
         public static final int RaffleDisplayNameWidget=0x7f050047;
         public static final int RaffleDisplayWidget=0x7f05003f;
         public static final int action_bar=0x7f05001c;
@@ -1162,7 +1161,7 @@ containing a value of this type.
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
         public static final int vers=0x7f05004d;
-        public static final int view_entries=0x7f050053;
+        public static final int view_entries=0x7f050051;
         public static final int winningEmail=0x7f05004b;
         public static final int withText=0x7f05000c;
     }

@@ -103,19 +103,7 @@ public class AddContestantActivity extends Activity {
 			strLastName.requestFocus();
 		} else {
 
-			// Save to JSON
-			JSONObject jsonObj;
-			jsonObj = new JSONObject();
-			jsonObj.put("EmailAddress", strEmailAddress.getText().toString());
-			jsonObj.put("FirstName", strFirstName.getText().toString());
-			jsonObj.put("LastName", strLastName.getText().toString());
-			//jsonObj.put("NumberEntries", strNumberEntries.getText().toString());
-			// data.put(tour);
-			jsonArr.put(jsonObj);
-			jsonString = jsonArr.toString();
 
-			Log.d("json", jsonString); //log json
-			// END Save to JSON
 			
 			File file = getBaseContext().getFileStreamPath(str_raffleName);
 			if (file.exists()) {
@@ -128,11 +116,25 @@ public class AddContestantActivity extends Activity {
 					char c = (char) bis.read();
 					b.append(c);
 				}
+
+				JSONArray jsonArr2 = new JSONArray(b.toString());
 				
-				//Take the existing JSON and put it into a new Array
-				//jsonArr.put(b);
-				String jsonString2 = jsonArr.toString();
-				
+				// Grab new info 
+				JSONObject jsonObj;
+				jsonObj = new JSONObject();
+				jsonObj.put("EmailAddress", strEmailAddress.getText().toString());
+				jsonObj.put("FirstName", strFirstName.getText().toString());
+				jsonObj.put("LastName", strLastName.getText().toString());
+				//jsonObj.put("NumberEntries", strNumberEntries.getText().toString());
+				// data.put(tour);
+				jsonArr2.put(jsonObj);
+				jsonString = jsonArr2.toString();
+	
+
+
+				 //log json Log.d("json", jsonString); //log json
+
+							
 				//Write the new array
 				displayData(jsonString);
 				

@@ -2,20 +2,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.malikahmad.emailraffle.MainActivity" >
-
-    <item
-        android:id="@+id/RaffleDisplayName"
-        android:orderInCategory="100"
-        android:title="@string/action_settings"
-        app:showAsAction="never"/>
-    <item
-        android:id="@+id/end_raffle"
-        android:orderInCategory="100"
-        android:title="@string/end_raffle"
-        app:showAsAction="never"/>
+    
     <item
         android:id="@+id/view_entries"
         android:orderInCategory="100"
         android:title="@string/view_entries"
+        app:showAsAction="never"/>
+    
+    <item
+        android:id="@+id/end_raffle"
+        android:orderInCategory="100"
+        android:title="@string/end_raffle"
         app:showAsAction="never"/>
 </menu>
