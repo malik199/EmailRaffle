@@ -52,26 +52,28 @@ public class AddContestantActivity extends Activity {
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		
-		//THIS WILL SEND YOU TO THE VIEW ENTRIES CLASS
-		switch (id){
-			case R.id.view_entries:
-				Intent intent = new Intent(AddContestantActivity.this, ViewEntries.class);
-				intent.putExtra("raffleName", str_raffleName);
-				startActivity(intent);
-				break;
-			case R.id.end_raffle:
-				Intent intent2 = new Intent(AddContestantActivity.this, EndRaffle.class);
-				intent2.putExtra("raffleName", str_raffleName);
-				startActivity(intent2);
-				break;
-			default:
-				break;
-			
+
+		// THIS WILL SEND YOU TO THE VIEW ENTRIES CLASS
+		switch (id) {
+		case R.id.view_entries:
+			Intent intent = new Intent(AddContestantActivity.this,
+					ViewEntries.class);
+			intent.putExtra("raffleName", str_raffleName);
+			startActivity(intent);
+			break;
+		case R.id.end_raffle:
+			Intent intent2 = new Intent(AddContestantActivity.this,
+					EndRaffle.class);
+			intent2.putExtra("raffleName", str_raffleName);
+			startActivity(intent2);
+			break;
+		default:
+			break;
+
 		}
-		/*if (id == R.id.view_entries) {
-			return true;
-		}*/
+		/*
+		 * if (id == R.id.view_entries) { return true; }
+		 */
 		return super.onOptionsItemSelected(item);
 	}
 
@@ -90,7 +92,8 @@ public class AddContestantActivity extends Activity {
 		EditText strEmailAddress = (EditText) findViewById(R.id.emailAddress);
 		EditText strFirstName = (EditText) findViewById(R.id.firstName);
 		EditText strLastName = (EditText) findViewById(R.id.lastName);
-		//EditText strNumberEntries = (EditText) findViewById(R.id.numberEntries);
+		// EditText strNumberEntries = (EditText)
+		// findViewById(R.id.numberEntries);
 
 		if (!isValidEmail(strEmailAddress.getText().toString())) {
 			strEmailAddress.setError("Invalid Email");
@@ -103,12 +106,18 @@ public class AddContestantActivity extends Activity {
 			strLastName.requestFocus();
 		} else {
 
+			// Grab new info and put into an array
+			JSONObject jsonObj;
+			jsonObj = new JSONObject();
+			jsonObj.put("EmailAddress", strEmailAddress.getText().toString());
+			jsonObj.put("FirstName", strFirstName.getText().toString());
+			jsonObj.put("LastName", strLastName.getText().toString());
 
-			
+			// Check to see if a new file exits
 			File file = getBaseContext().getFileStreamPath(str_raffleName);
 			if (file.exists()) {
-				
-				// ReadFile
+
+				// Read old file
 				FileInputStream fis = openFileInput(str_raffleName);
 				BufferedInputStream bis = new BufferedInputStream(fis);
 				StringBuffer b = new StringBuffer();
@@ -117,32 +126,16 @@ public class AddContestantActivity extends Activity {
 					b.append(c);
 				}
 
+				// put new array into old array
 				JSONArray jsonArr2 = new JSONArray(b.toString());
-				
-				// Grab new info 
-				JSONObject jsonObj;
-				jsonObj = new JSONObject();
-				jsonObj.put("EmailAddress", strEmailAddress.getText().toString());
-				jsonObj.put("FirstName", strFirstName.getText().toString());
-				jsonObj.put("LastName", strLastName.getText().toString());
-				//jsonObj.put("NumberEntries", strNumberEntries.getText().toString());
-				// data.put(tour);
+
 				jsonArr2.put(jsonObj);
 				jsonString = jsonArr2.toString();
-	
 
-
-				 //log json Log.d("json", jsonString); //log json
-
-							
-				//Write the new array
-				//displayData(jsonString);
-				
-				//Write the new array to disk
+				// Write the new array to disk
 				try {
-					FileOutputStream fos = new FileOutputStream(file,false); //appending info type true
-					String strContent = jsonString;
-					fos.write(strContent.getBytes());
+					FileOutputStream fos = new FileOutputStream(file, false);
+					fos.write(jsonString.getBytes());
 					fos.close();
 
 				} catch (FileNotFoundException ex) {
@@ -150,16 +143,30 @@ public class AddContestantActivity extends Activity {
 				} catch (IOException ioe) {
 					System.out.println("IOException : " + ioe);
 				}
-				
-				Toast.makeText(this, "This is previous file has been written", Toast.LENGTH_LONG).show();
+
+				Toast.makeText(this,
+						"Data was written to the file: " + str_raffleName,
+						Toast.LENGTH_LONG).show();
 			} else {
-				
-				FileOutputStream fos = openFileOutput(str_raffleName, MODE_PRIVATE);
-				fos.write(jsonString.getBytes());
-				fos.close();
-				Toast.makeText(this, "New file has been written", Toast.LENGTH_LONG).show();// do nothing
-				//TextView textViewOutput = (TextView) findViewById(R.id.textViewOutput);
-				//textViewOutput.setText(jsonString);
+
+				JSONArray jsonArr3 = new JSONArray();
+				jsonArr3.put(jsonObj);
+				jsonString = jsonArr3.toString();
+				try {
+					FileOutputStream fos = openFileOutput(str_raffleName,
+							MODE_PRIVATE);
+					fos.write(jsonString.getBytes());
+					fos.close();
+					Toast.makeText(this, "New file has been written",
+							Toast.LENGTH_LONG).show();// do nothing
+					// TextView textViewOutput = (TextView)
+					// findViewById(R.id.textViewOutput);
+					// textViewOutput.setText(jsonString);
+				} catch (FileNotFoundException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 
 			/*
@@ -169,27 +176,28 @@ public class AddContestantActivity extends Activity {
 			 * Log.d("myMessage4", strNumberEntries.getText().toString());
 			 */
 
-			//Toast.makeText(this, "Contestant Sumbitted", Toast.LENGTH_LONG).show();
+			// Toast.makeText(this, "Contestant Sumbitted",
+			// Toast.LENGTH_LONG).show();
 			TextView intContestantNumber = (TextView) findViewById(R.id.contestantNumber);
 			contNumb++;
 			intContestantNumber.setText("Contestant #" + contNumb);
 			resetFields(strEmailAddress, strFirstName, strLastName);
 		}
 	}
-	
-	private void displayData(String myString){
+
+	private void displayData(String myString) {
 		TextView textViewOutput = (TextView) findViewById(R.id.textViewOutput);
 		textViewOutput.setText(myString);
 	}
 
 	private void resetFields(Object o1, Object o2, Object o3) {
-		//int resetNumb = 1;
+		// int resetNumb = 1;
 		((EditText) o1).setText(null);
 		((EditText) o1).requestFocus();
 
 		((EditText) o2).setText(null);
 		((EditText) o3).setText(null);
-		//((EditText) o4).setText(String.valueOf(resetNumb));
+		// ((EditText) o4).setText(String.valueOf(resetNumb));
 
 	}
 

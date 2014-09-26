@@ -79,7 +79,7 @@ public class EndRaffle extends Activity {
 					"FirstName");
 			String lastname = data.getJSONObject(finalrandom_int).getString(
 					"LastName");
-			final String outPut = (finalrandom_int) + ". " + email + " - "
+			final String outPut = (finalrandom_int+1) + ". " + email + " - "
 					+ firstname + " " + lastname;
 
 			// String theFinalRandomNumber =

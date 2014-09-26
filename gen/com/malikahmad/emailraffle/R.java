@@ -1099,7 +1099,7 @@ containing a value of this type.
         public static final int action_mode_close_button=0x7f050024;
         public static final int activity_chooser_view_content=0x7f050025;
         public static final int always=0x7f05000b;
-        public static final int api=0x7f05004e;
+        public static final int api=0x7f05004f;
         public static final int beginning=0x7f050011;
         public static final int calculate_raffle=0x7f050047;
         public static final int checkbox=0x7f05002d;
@@ -1112,10 +1112,11 @@ containing a value of this type.
         public static final int edit_query=0x7f050030;
         public static final int emailAddress=0x7f050041;
         public static final int end=0x7f050013;
-        public static final int end_raffle=0x7f050051;
+        public static final int end_raffle=0x7f050052;
         public static final int expand_activities_button=0x7f050026;
         public static final int expanded_menu=0x7f05002c;
         public static final int export_csv=0x7f05004b;
+        public static final int filepath=0x7f05004c;
         public static final int firstName=0x7f050042;
         public static final int home=0x7f050014;
         public static final int homeAsUp=0x7f050005;
@@ -1124,10 +1125,10 @@ containing a value of this type.
         public static final int image=0x7f050027;
         public static final int lastName=0x7f050043;
         public static final int listMode=0x7f050001;
-        public static final int listView1=0x7f05004f;
+        public static final int listView1=0x7f050050;
         public static final int list_item=0x7f050029;
         public static final int middle=0x7f050012;
-        public static final int name=0x7f05004d;
+        public static final int name=0x7f05004e;
         public static final int never=0x7f050009;
         public static final int none=0x7f050010;
         public static final int normal=0x7f050000;
@@ -1162,8 +1163,8 @@ containing a value of this type.
         public static final int top_action_bar=0x7f050020;
         public static final int up=0x7f050021;
         public static final int useLogo=0x7f050003;
-        public static final int vers=0x7f05004c;
-        public static final int view_entries=0x7f050050;
+        public static final int vers=0x7f05004d;
+        public static final int view_entries=0x7f050051;
         public static final int winningEmail=0x7f05004a;
         public static final int withText=0x7f05000c;
     }
@@ -1270,24 +1271,25 @@ containing a value of this type.
          */
         public static final int abc_shareactionprovider_share_with_application=0x7f0a000b;
         public static final int action_settings=0x7f0a000f;
-        public static final int already_raffle=0x7f0a001d;
+        public static final int already_raffle=0x7f0a001e;
         public static final int app_name=0x7f0a000d;
-        public static final int continue_raffle=0x7f0a001e;
-        public static final int email_address=0x7f0a0014;
+        public static final int continue_raffle=0x7f0a001f;
+        public static final int email_address=0x7f0a0015;
         public static final int end_raffle=0x7f0a0011;
-        public static final int export_csv=0x7f0a001c;
-        public static final int first_name=0x7f0a0015;
-        public static final int get_winner=0x7f0a001a;
+        public static final int export_csv=0x7f0a001d;
+        public static final int first_name=0x7f0a0016;
+        public static final int get_winner=0x7f0a001b;
         public static final int hello_world=0x7f0a000e;
-        public static final int last_name=0x7f0a0016;
-        public static final int new_name=0x7f0a001f;
+        public static final int last_name=0x7f0a0017;
+        public static final int new_name=0x7f0a0020;
         public static final int new_raffle=0x7f0a0010;
-        public static final int number_entries=0x7f0a0017;
-        public static final int raffle_name=0x7f0a0013;
-        public static final int random_text=0x7f0a0019;
-        public static final int submit=0x7f0a0018;
-        public static final int the_winner=0x7f0a001b;
-        public static final int view_entries=0x7f0a0012;
+        public static final int number_entries=0x7f0a0018;
+        public static final int raffle_name=0x7f0a0014;
+        public static final int random_text=0x7f0a001a;
+        public static final int start_new_raffle=0x7f0a0012;
+        public static final int submit=0x7f0a0019;
+        public static final int the_winner=0x7f0a001c;
+        public static final int view_entries=0x7f0a0013;
     }
     public static final class style {
         /** 

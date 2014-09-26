@@ -17,12 +17,22 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:background="@drawable/button_full"
-        android:text="@string/new_raffle"
+        android:text="@string/start_new_raffle"
         android:onClick="startNewRaffle"
         android:paddingLeft="35dp"
         android:paddingRight="35dp"
         android:textAllCaps="true"
         android:textColor="#ffffff"
         android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/filepath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/start_raffle"
+        android:layout_below="@+id/start_raffle"
+        android:layout_marginTop="45dp"
+        android:visibility="invisible" 
+        android:text="TextView" />
 
 </RelativeLayout>
