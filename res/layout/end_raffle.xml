@@ -21,16 +21,20 @@
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
+
+      <Button
         android:id="@+id/calculate_raffle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="55dp"
+        android:background="@drawable/button_full"
         android:onClick="calculateRaffle"
-        android:padding="20dp"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
         android:text="@string/get_winner"
-        android:textColor="#FFFFFF"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
         android:textStyle="bold" />
 
     <ImageView
@@ -58,21 +62,26 @@
         android:layout_gravity="center_horizontal"
         android:text="winning email"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#005A31"
+        android:textColor="#00a6e4"
         android:textStyle="bold"
         android:visibility="invisible"  />
 
-    <Button
+
+      <Button
         android:id="@+id/export_csv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:background="@drawable/button_full"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
         android:text="@string/export_csv"
-        android:textStyle="bold" 
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
         android:visibility="invisible" 
         android:onClick="exportCSV" />
-
+    
 </LinearLayout>

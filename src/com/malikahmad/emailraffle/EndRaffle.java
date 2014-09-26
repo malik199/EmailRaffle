@@ -118,9 +118,10 @@ public class EndRaffle extends Activity {
 	}
 	
 	public void exportCSV(View view) {
-		Toast.makeText(getApplicationContext(), "Exporting CSV",
-				Toast.LENGTH_LONG).show();
-	
+		Intent intent = new Intent(getApplicationContext(),
+				ExportCSV.class);
+		intent.putExtra("raffleName", str_raffleName);
+		startActivity(intent);
 	}
 
 }

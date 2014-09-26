@@ -136,7 +136,7 @@ public class AddContestantActivity extends Activity {
 
 							
 				//Write the new array
-				displayData(jsonString);
+				//displayData(jsonString);
 				
 				//Write the new array to disk
 				try {
@@ -158,8 +158,8 @@ public class AddContestantActivity extends Activity {
 				fos.write(jsonString.getBytes());
 				fos.close();
 				Toast.makeText(this, "New file has been written", Toast.LENGTH_LONG).show();// do nothing
-				TextView textViewOutput = (TextView) findViewById(R.id.textViewOutput);
-				textViewOutput.setText(jsonString);
+				//TextView textViewOutput = (TextView) findViewById(R.id.textViewOutput);
+				//textViewOutput.setText(jsonString);
 			}
 
 			/*

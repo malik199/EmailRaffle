@@ -106,8 +106,8 @@ public class ViewEntries extends Activity {
 
 		}
 
-		Toast.makeText(getApplicationContext(), b.toString(),
-				Toast.LENGTH_SHORT).show();
+	/*	Toast.makeText(getApplicationContext(), b.toString(),
+				Toast.LENGTH_SHORT).show();*/
 
 		try {
 

@@ -65,17 +65,24 @@
         android:text="1"
         android:width="20dp" /> -->
 
+
     <Button
         android:id="@+id/submitContestant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
+        android:background="@drawable/button_full"
         android:onClick="submitContestant"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
         android:text="@string/submit"
-        android:width="164dip" />
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 
-    <ScrollView
+<!--     <ScrollView
         android:id="@+id/scrollView1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
@@ -87,6 +94,6 @@
             android:layout_marginTop="30dp"
             android:text="@string/random_text" />
 
-    </ScrollView>
+    </ScrollView> -->
 
 </LinearLayout>

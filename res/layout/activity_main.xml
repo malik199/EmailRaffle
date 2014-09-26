@@ -44,7 +44,13 @@
         android:layout_below="@+id/textViewOutput"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="104dp"
+        android:background="@drawable/button_full"
+        android:onClick="startRaffle"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp"
         android:text="@string/new_raffle"
-        android:onClick="startRaffle" />
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
 
 </RelativeLayout>
